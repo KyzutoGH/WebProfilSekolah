@@ -10,12 +10,12 @@ class UserSeeder extends Seeder
 {
     public function run(): void 
     {
-        $user = [
-            'name' => 'Admin Smp Pgri',
-            'email' => 'smppgribakung@gmail.com',
-            'password' => bcrypt('smppgri1984'), 
-        ];
-
-        User::create($user);
+        User::firstOrCreate(
+            ['email' => 'smppgribakung@gmail.com'], // Cek dulu berdasarkan email
+            [
+                'name' => 'Admin Smp Pgri',
+                'password' => bcrypt('smppgri1984'),
+            ]
+        );
     }
 }
