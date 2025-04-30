@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* style.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/*button*/
+.btn-danger{
+  background-color: rgb(211, 55, 55);
+  border-radius: 10px;
+  border-color:  rgb(211, 55, 55);
+  padding: 10px 30px;
+  color:white;
+}
+.btn-outline-danger{
+  background-color:#226b3a;
+  border-radius: 10px;
+  border-color: #226b3a;
+  padding: 10px 30px;
+  color:white;
+}
+
+/*navbar */
+.nav-item .nav-link{
+  font-size:18px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+}
+.scroll-nav-active {
+  background-color:white;
+  /*border-bottom: 1px solid rgb(189, 39, 39);*/
+  box-shadow: 1px 1px 11px -1px rgba(1, 1, 1, 0.08); 
+
+  
+}
+.text-nav-active {
+  color: black;
+}
+
+/* Hero Section Styling */
+#hero {
+  background-image: url("../../assets/images/background-pgri.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+  color: white;
+  position: relative;
+  flex-direction: column; /* Elemen tersusun vertikal */
+  
+ 
+  
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Letakkan sebelum konten */
+}
+
+.hero-title {
+  position: relative;
+  z-index: 2; /* Pastikan teks berada di atas */
+}
+
+/* Animasi Masuk */
+.animate-fade-down {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeDown 1s ease-out forwards;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.5s; /* Delay animasi untuk paragraf */
+}
+
+/* Keyframes animasi */
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem; /* Ukuran besar */
+  font-weight: bold; /* Tebal */
+  line-height: 1.1;
+  color: #f0f0f0; /* Warna putih cerah */
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Bayangan teks untuk menonjolkan tulisan */
+  padding-top: 125px;
+ 
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .hero-title h1 {
+    font-size: 2.8rem; /* Ukuran lebih kecil untuk layar kecil */
+  }
+}
+
+/* Styling untuk paragraf */
+#hero p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font modern dan mudah dibaca */
+  font-size: 1.5rem; /* Ukuran teks */
+  color: #f0f0f0; /* Warna teks putih cerah */
+  line-height: 1.8; /* Jarak antar baris */
+  text-align: center; /* Rata tengah */
+  max-width: 800px; /* Batas lebar teks */
+  margin: 40px auto 0; /* Posisi di tengah dengan jarak atas-bawah */
+  padding: 10px 20px; /* Jarak dalam untuk membuat ruang */
+  padding-top: 150px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  #hero p {
+    font-size: 1.2rem; /* Ukuran lebih kecil */
+    padding: 8px 15px; /* Padding lebih kecil */
+  }
+}
+
+
+/* Section Header */
+#berita .header-berita h2 {
+  font-size: 2.5rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Card Styling */
+#berita .card {
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+/* Card Hover Effects */
+#berita .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+#berita .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card Body */
+#berita .card-body {
+  padding: 20px;
+  background-color: #fff;
+  border-top: 2px solid #48882f; /* Warna sesuai tema */
+  text-align: left;
+}
+
+/* Title Styling */
+#berita .card-title {
+  font-size: 1.25rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#berita .card-title:hover {
+  color: #4c643c;
+}
+
+/* Button Styling */
+#berita .btn {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#berita .btn:hover {
+  background-color: #6eb435;
+  color: #fff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #berita .card-img-top {
+    height: 180px;
+  }
+
+  #berita .header-berita h2 {
+    font-size: 2rem;
+  }
+}
+
+/* foto */
+/* Foto kegiatan */
+.section-foto {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.parallax {
+  background-image: url("../../assets/images/backgroundfoto.png");
+}
+
+.stripe-putih {
+  height: 5px;
+  width: 40px;
+  background-color: #fff;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.btn-outline-white {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-white:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.foto-kegiatan-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.foto-kegiatan-img:hover {
+  transform: scale(1.1);
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.text-gradient-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h5 {
+  letter-spacing: 1px;
+}
+
+/*hover card admin*/
+/* Efek Hover untuk Card */
+/* Efek Hover untuk Card Admin */
+.admin-card:hover {
+  background-color: #2E7D32 !important; /* Hijau */
+  color: white !important;
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.admin-card:hover i,
+.admin-card:hover h5,
+.admin-card:hover p {
+  color: white !important;
+}
+
+/* Warna Default Tombol Admin */
+.btn-admin-kelola {
+  background-color: #007BFF; /* Biru */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover Tombol Admin */
+.btn-admin-kelola:hover {
+  background-color: #0056b3; /* Biru lebih gelap */
+  color: white;
+  box-shadow: 0px 5px 15px rgba(0, 91, 187, 0.3);
+}
+
+
+#poster-pendaftaran .card {
+  background: white;
+  transition: all 0.3s ease;
+}
+
+#poster-pendaftaran .btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#poster-pendaftaran img {
+  transition: transform 0.3s ease;
+}
+
+#poster-pendaftaran img:hover {
+  transform: scale(1.01);
+}
