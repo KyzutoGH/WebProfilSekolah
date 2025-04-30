@@ -11,7 +11,7 @@ class UserSeeder extends Seeder
     public function run(): void 
     {
         User::firstOrCreate(
-            ['email' => 'smppgribakung@gmail.com'], // Cek dulu berdasarkan email
+            ['email' => 'smppgribakung@gmail.com'],
             [
                 'name' => 'Admin Smp Pgri',
                 'password' => bcrypt('smppgri1984'),
