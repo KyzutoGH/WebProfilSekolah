@@ -10,17 +10,21 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::table('ppdbs', function (Blueprint $table) {
-        $table->string('asal_sekolah')->after('agama');
-    });
-}
+    {
+        if (!Schema::hasColumn('ppdbs', 'asal_sekolah')) {
+            Schema::table('ppdbs', function (Blueprint $table) {
+                $table->string('asal_sekolah')->after('agama');
+            });
+        }
+    }
 
-public function down()
-{
-    Schema::table('ppdbs', function (Blueprint $table) {
-        $table->dropColumn('asal_sekolah');
-    });
-}
+    public function down()
+    {
+        if (Schema::hasColumn('ppdbs', 'asal_sekolah')) {
+            Schema::table('ppdbs', function (Blueprint $table) {
+                $table->dropColumn('asal_sekolah');
+            });
+        }
+    }
 
 };
