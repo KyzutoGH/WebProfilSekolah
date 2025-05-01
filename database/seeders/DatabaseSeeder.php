@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             [
                 // UserSeeder::class,
                 // BlogSeeder::class,
-                ContactSeeder::class,
+                // ContactSeeder::class,
                 PhotoSeeder::class,
                 PpdbSeeder::class
             ]
